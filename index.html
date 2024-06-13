@@ -216,8 +216,8 @@
                     </div>
 
                     <div class="card">
-                        <div class="image-card"><img src="" alt=""></div>
-                        <a href="" target="_blank">
+                        <div class="image-card"><img src="portfolio.PNG" alt=""></div>
+                        <a href="https://muhammadraedsiddiquie.github.io/MuhammadRaedSiddiquie-Portfolio_Web_Design/" target="_blank">
                         <div class="card-text">
                             <h1>Portfolio</h1>
                             <p>Interactive and Simple Modern Web Development Portfolio designed with custom Css & Js</p>
@@ -364,7 +364,12 @@
         document.getElementById('myForm').addEventListener('mouseover', function () {
             document.documentElement.style.setProperty("--heading-animation-form", "after 2s normal forwards")
         })
-        projectcard[0].addEventListener('click', function () {
+       
+        
+        var x = window.matchMedia("(max-width: 720px)")
+        function myFunction(x) {
+  if (x.matches) { // If media query matches
+    projectcard[0].addEventListener('click', function () {
             imagecard[0].style.animation = "card 1s ease-in forwards"
         })
         
@@ -386,11 +391,6 @@
         projectcard[5].addEventListener('click', function () {
             imagecard[5].style.animation = "card 1s ease-in forwards"
         })
-        
-        var x = window.matchMedia("(max-width: 720px)")
-        function myFunction(x) {
-  if (x.matches) { // If media query matches
-    
        
   } else {
     projectcard[0].addEventListener('mouseover', function () {
@@ -431,6 +431,7 @@
         })
   }
 }
+myFunction(x);
 
         
 
